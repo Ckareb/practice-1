@@ -1,15 +1,11 @@
-from unicodedata import name
-
-
-age = input( 'Введите ваш возраст')
-
-nam = input('Введите имя')
-
-six = 16
+nam = input('Введите имя ')
 
 if nam == 'Иван':
     print ('Я так и знал')
 else: print('Не знаю')
+
+six = 16
+age = input( 'Введите ваш возраст ')
 
 if int(age) <= six:
     rem =  16 - int(age) 
