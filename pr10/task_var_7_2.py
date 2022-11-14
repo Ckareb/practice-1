@@ -1,13 +1,21 @@
+def readFile():
+    global N
+    file = open('E:\\work\\practice-1\\pr10\\budkov_Y-222_vvod.txt', 'r')
+    N = int(file.read(1))
+    file.close()
+
 def inMat():
+    file = open('E:\\work\\practice-1\\pr10\\budkov_Y-222_vvod.txt', 'r')
     for i in range(N):
         Y = []
         for i in range(N):
-            Y.append(int(input('Внести значение в массив ')))
+            Y.append(int(file.readline(2)))
         X.append(Y)
     for i in range(N):
         for j in range(N):
             print(X[i][j], end=' ')
         print()
+    file.close()
 
 
 def Mas():
@@ -38,10 +46,11 @@ def Trans(D):
         print()
 
 
-file = open('budkov_Y-222_vvod.txt', 'r')
-print(file)
-file.close()
-N = int(input('Введите количество столбцов и строк квадратной матрицы '))
+readFile()
+
+#file = open('E:\\work\\practice-1\\pr10\\budkov_Y-222_vivod.txt', 'w')
+#file.write(str(X[i][j]))
+#file.close()
 X = []
 inMat()
 
