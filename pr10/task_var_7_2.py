@@ -35,6 +35,7 @@ def sumMas():
    
 
 def Trans(D):
+    file = open('E:\\work\\practice-1\\pr10\\budkov_Y-222_vivod.txt', 'w')
     for i in range(N):
         for j in range(N):
             if i % 2 == 0:
@@ -42,15 +43,16 @@ def Trans(D):
 
     for i in range(N):
         for j in range(N):
+            file.write(str(X[i][j]))
+            file.write(str('     '))
             print(X[i][j], end=' ')
-        print()
+        file.write(str('       '))
+        print('')
+    file.close()
 
 
 readFile()
 
-#file = open('E:\\work\\practice-1\\pr10\\budkov_Y-222_vivod.txt', 'w')
-#file.write(str(X[i][j]))
-#file.close()
 X = []
 inMat()
 
